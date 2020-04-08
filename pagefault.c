@@ -24,4 +24,38 @@ int main()
         for(int i=0;i<m;i++){
     scanf("%d",&arr[i]);
     }
+    
+    
+     int k=0,flag=0,index=0,min=0,d=0;
+
+        for(int i=0;i<n;i++){
+
+        frame[i]=arr[i];
+        count[i]=count[i]+1;
+
+        }
+          counter=4;//inserting four elements
+                for(int i=n;i<m;i++){
+            for(int j=0;j<n;j++){
+
+        if(frame[j]==arr[i]){
+        //if we found out that the element is present will be use in future we change the flag to 1
+            flag=1;
+            index=j;
+            break;
+                }
+        }
+
+        //checking the condition if the given elment will be use or not using flag
+        if(flag==0){
+            frame[k%(n)]=arr[i];
+            counter++;
+            //increment the total number of page fault
+             k++;
+        }
+            flag=0;
+       }
+
+
+
 
