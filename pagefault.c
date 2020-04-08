@@ -24,8 +24,8 @@ int main()
         for(int i=0;i<m;i++){
     scanf("%d",&arr[i]);
     }
-    
-    
+
+
      int k=0,flag=0,index=0,min=0,d=0;
 
         for(int i=0;i<n;i++){
@@ -55,7 +55,10 @@ int main()
         }
             flag=0;
        }
-          for(int i=0;i<m;i++)
+
+
+
+        for(int i=0;i<m;i++)
     {
 
         if(frame[z%n]!=arr[i])
@@ -79,7 +82,3 @@ int main()
     printf("Total number of page fault is %d",counter);
 
     }
-
-
-
-
