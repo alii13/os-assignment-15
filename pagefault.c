@@ -55,6 +55,30 @@ int main()
         }
             flag=0;
        }
+          for(int i=0;i<m;i++)
+    {
+
+        if(frame[z%n]!=arr[i])
+        {
+            for(int j=i+1;j<m;j++)
+                {
+                    if(frame[z%n]==arr[n])
+                        {
+                            int x=0;
+                              min--;//if we find out the there is a smallest element we put the element in that frame and decrease it by 1
+                                }
+                    }
+                }
+            }
+          if( z==0)
+        {
+        count[z]=count[z%n]+1;//otherwise increment it by 1;
+           }
+
+
+    printf("Total number of page fault is %d",counter);
+
+    }
 
 
 
