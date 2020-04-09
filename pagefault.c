@@ -17,7 +17,9 @@ int main()
         scanf("%d",&n);
     int arr[m];//for storing the elementswe are using array structure inplace of queue
     int frame[n];//using the FIFO approch in case of same number of counts to resolve the tie
-    int count[n],z;//use of count array for take care of increment and decrement
+
+    int count[n],z;//use of count array for take care of increment and decrement in page frame array
+
     int counter=0;//intial elements are fixed for page fault
     printf("Enter elements of array \n");
 
@@ -45,10 +47,10 @@ int main()
             break;
                 }
         }
-
+       //sort(count,count+n);
         //checking the condition if the given elment will be use or not using flag
         if(flag==0){
-            frame[k%(n)]=arr[i];
+            frame[k%(n)]=arr[i];//Susbtitute the value of arr[i] to frame array with smallest counter using flag
             counter++;
             //increment the total number of page fault
              k++;
@@ -68,7 +70,7 @@ int main()
                     if(frame[z%n]==arr[n])
                         {
                             int x=0;
-                              min--;//if we find out the there is a smallest element we put the element in that frame and decrease it by 1
+                              min--;//if we find out the there is a smallest element in frame counter we put the element in that frame and decrease it by 1
                                 }
                     }
                 }
@@ -79,6 +81,6 @@ int main()
            }
 
 
-    printf("Total number of page fault is %d",counter);
+    printf("Total number of page fault is %d",counter+1);
 
     }
